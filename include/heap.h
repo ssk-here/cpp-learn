@@ -15,11 +15,12 @@ public:
     void swap(int& a, int& b);
     int parent(int x) const;
     bool isLeftNode(int index);
+    virtual void HeapifyUp(int index) = 0; // Pure virtual function
+    virtual void HeapifyDown(int index) = 0; // Pure virtual function
+    protected:
     int* heap;
     int capacity;
     int sz, temp;
-    virtual void HeapifyUp(int index) = 0; // Pure virtual function
-    virtual void HeapifyDown(int index) = 0; // Pure virtual function
 };;
 
 class MaxHeap :public Heap {

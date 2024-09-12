@@ -23,6 +23,8 @@ public:
 
     // Function to print the linked list.
     void printList(ListNode* head);
+
+    void DeleteNode(ListNode * & head,ListNode *deleteNode);
 };
 
 #endif // LISTS_H

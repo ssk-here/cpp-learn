@@ -1,5 +1,5 @@
 # Main file
-MAINFILE = hello
+MAINFILE = heap_check
 
 # Compiler
 CXX = g++

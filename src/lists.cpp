@@ -40,3 +40,17 @@ void LinkedList::printList(ListNode* head) {
     std::cout << "-X";
     std::cout << std::endl;
 }
+
+// Function to delete a node from the linked list.
+//track the address of prev->next. No edge cases.clean code
+void LinkedList::DeleteNode(ListNode*& head, ListNode* deleteNode){
+    std::cout << "Deleting" << deleteNode->val << std::endl;
+    ListNode **cur = &head;
+    while(*cur != deleteNode){
+        std::cout << (*cur)->val << "->";
+        cur = &((*cur)->next);
+    }
+    std::cout << std::endl;
+    *cur = deleteNode->next;
+    delete deleteNode;
+}
